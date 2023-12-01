@@ -2,7 +2,9 @@ const express = require('express')
 const dotenv = require('dotenv')
 const colors = require('colors')
 const connectDb = require('./config/db')
+const authRoutes = require('./routes/authRoutes.js')
 const buyRoutes = require('./routes/buyRoutes.js')
+const categoryRoutes = require('./routes/categoryRoutes.js')
 const productRoutes = require('./routes/productRoutes.js')
 const usersRoutes = require('./routes/usersRoutes.js')
 const cors = require("cors")
@@ -18,6 +20,9 @@ app.use(cors())
 
 connectDb()
 
+
+app.use(authRoutes)
+
 app.use('/usuario',
     usersRoutes)
 
@@ -26,6 +31,9 @@ app.use('/producto',
 
 app.use('/compra',
     buyRoutes)
+
+app.use('/categoria',
+    categoryRoutes)
 
 const puerto = 4000
 
