@@ -12,6 +12,22 @@ router.get("/", async (req, res) => {
   });
 });
 
+router.get("/store", async (req, res) => {
+  try {
+    const stores = await User.find({ role: "Tienda" });
+
+    return res.json({
+      stores
+    });
+  } catch (error) {
+    return res.status(500).json({
+      success: false,
+      message: "Error interno del servidor",
+      error: error.message,
+    });
+}
+});
+
 router.get("/:id", async (req, res) => {
   const buyId = req.params.id;
 

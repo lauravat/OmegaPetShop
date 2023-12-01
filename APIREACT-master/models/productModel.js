@@ -1,27 +1,40 @@
 const mongoose = require("mongoose");
-const AutoIncrement = require("mongoose-sequence")(mongoose);
+const Category = require("./categoriesModel");
+
+const UserSchema = mongoose.Schema({
+    id: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User',
+        required: true
+    },
+    name: {
+      type: String,
+      required: true
+    }
+})
 
 const ProductcampSchema = mongoose.Schema({
-    id: {
-        type: Number,
-        unique: true,
-    },
     nameProduct:{
         type: String,
         required: [true,
             "el nombre del producto es requerido"],
         maxlength: [100, "nombre de bootcamp no mayor a 100 caracteres"]
     },
+    Store: UserSchema,
     imgUrl:{
         type:String,
         required: [true,
             "la imagen del producto es necesaria"]
     },
-    category:{
-        type: String,
-        required: [true,
-            "La categoria del producto es necesaria"],
-        maxlength: [100, "nombre de la categoria maximo 100 caracteres"]
+    categories: {
+        id: {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'Category',
+        },
+        name:{
+            type:String,
+            required: [true, "el nombre de categoria es necesario"]
+        } 
     },
     price:{
         type: Number,
@@ -46,7 +59,5 @@ const ProductcampSchema = mongoose.Schema({
     ],
     avgRating: Number,
 })
-
-ProductcampSchema.plugin(AutoIncrement, { inc_field: 'id' });
 
 module.exports = mongoose.model('Product', ProductcampSchema)

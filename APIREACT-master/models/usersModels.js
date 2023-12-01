@@ -5,15 +5,19 @@ const UsercampSchema = mongoose.Schema({
         type: String,
         required: [true,
              "el nombre es requerido"],
-        unique: true, 
         maxlength: [100, "nombre de bootcamp no mayor a 50 caracteres"]
     },
     lastname:{
         type: String,
         required: [true,
              "el apellido es requerido"],
-        unique: true, 
         maxlength: [100, "apellido del usuario no mayor a 100 caracteres"]
+    },
+    email: {
+        type: String,
+        require: [true,
+            "el correo es requerido"],
+        unique: true
     },
     phone:{
         type: Number,
@@ -24,6 +28,12 @@ const UsercampSchema = mongoose.Schema({
         required: [true,
             "la direccion es requerida"],
         maxlength:[100, "direccion de bootcamp no mayor a 100 caracteres "]
+    },
+    role: {
+        type: String,
+        enum: ['Tienda', 'Usuario'],
+        default: 'User',
+        require: true
     },
     password:{
         type:String,
