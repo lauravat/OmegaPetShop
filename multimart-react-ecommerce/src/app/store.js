@@ -1,10 +1,10 @@
-import { configureStore } from "@reduxjs/toolkit";
-import cartSlice, { cartMiddleware } from "./features/cart/cartSlice";
+import { configureStore } from '@reduxjs/toolkit'
+import cartSlice, { cartMiddleware } from './features/cart/cartSlice'
 
 export const store = configureStore({
   reducer: {
-    cart: cartSlice,
+    cart: cartSlice
   },
   middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware().concat(cartMiddleware),
-});
+    getDefaultMiddleware().concat(cartMiddleware)
+})

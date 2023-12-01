@@ -1,0 +1,83 @@
+.form-disposition{
+    justify-content: center;
+    gap: 13px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+    margin-top: 23px;
+    text-align: center;
+}
+.form-input{
+    background-color: #eaeaea;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    padding: .8rem 1.5rem;
+}
+.FormContent .form-disposition{
+    width: 30%;
+}
+.FormContent .FormMessage{
+    margin-top: 20px;
+    font-size: 1.2rem;
+}
+.FormContent .FormMessage a{
+    text-decoration: none;
+}
+.FormContent .Alert{
+    font-size: 1.2rem;
+    color: rgb(233 56 56);
+    margin-top: 20px;
+}
+.Button{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-sizing: border-box;
+    outline: 0px;
+    border: 0px;
+    margin: 0px;
+    cursor: pointer;
+    user-select: none;
+    vertical-align: middle;
+    appearance: none;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.875rem;
+    line-height: 1.75;
+    min-width: 64px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(99, 102, 241);
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 1px 5px;
+    text-transform: none;
+    padding: 8px 20px;
+}
+.Button-product{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-sizing: border-box;
+    outline: 0px;
+    border: 0px;
+    margin: 0px;
+    cursor: pointer;
+    user-select: none;
+    vertical-align: middle;
+    appearance: none;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.875rem;
+    line-height: 1.75;
+    min-width: 64px;
+    color: rgb(255, 255, 255);
+    background-color: #0f3460;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 1px 5px;
+    border-radius: 6px;
+    text-transform: none;
+    padding: 8px 20px;
+}
+.Button-product:hover{
+    color: #fff;
+}

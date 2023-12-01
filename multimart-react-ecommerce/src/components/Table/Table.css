@@ -1,0 +1,21 @@
+.header-table{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 10px;
+}
+
+.header-table h2{
+    color: var(--blue);
+}
+
+.TableContent{
+    position: relative;
+    display: grid;
+    min-height: 500px;
+    background: var(--white);
+    padding: 20px 20px 0 20px;
+    box-shadow:  0 7px 25px var(--shadow);
+    border-radius: 20px;
+    margin: 20px;
+}

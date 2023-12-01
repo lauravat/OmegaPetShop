@@ -65,6 +65,11 @@ button {
   display: flex;
 }
 
+.Table-Admin{
+  width: 90%;
+  margin: 20px auto;
+}
+
 /*   ---Home Slider---   */
 
 .homeSlide {

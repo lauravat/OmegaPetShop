@@ -1,0 +1,23 @@
+.FormContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.FormContent .form-disposition{
+    width: 30%;
+}
+.FormContent .FormMessage{
+    margin-top: 20px;
+    font-size: 1.2rem;
+}
+.FormContent .FormMessage a{
+    text-decoration: none;
+}
+.FormContent .Alert{
+    font-size: 1.2rem;
+    color: rgb(233 56 56);
+    margin-top: 20px;
+}
